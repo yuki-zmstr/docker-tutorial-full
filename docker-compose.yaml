@@ -1,10 +1,14 @@
 version: '3'
 services:
-  # my-app:
-  # image: ${docker-registry}/my-app:1.0
-  # ports:
-  # - 3000:3000
-  mongodb:
+  # during local development, might want to comment this, and instead run node server.js,
+  # since the latest version is still not on the repository.
+  # but the dev server needs this, to pull the image of the app.
+  # if running app from a docker container, change the DB url to the named version. (not localhost with port)
+  my-app:
+    image: 533267241727.dkr.ecr.ap-southeast-1.amazonaws.com/my-app:1.2
+    ports:
+      - 3000:3000
+  mongodb: # as if setting container name in docker run --name mongodb
     image: mongo
     ports:
       - 27017:27017
