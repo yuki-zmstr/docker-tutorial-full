@@ -2,6 +2,9 @@
 
 Reference: https://www.youtube.com/watch?v=3c-iBn73dDE&ab_channel=TechWorldwithNana
 
+To simulate a development server, can copy the content of docker-compose.yaml into a file in a separate local directory, and run docker-compose up from there.
+Make sure to pull the app, mongodb, and mongo express images.
+
 This demo app shows a simple user profile app set up using
 
 - index.html with pure js and css styles
